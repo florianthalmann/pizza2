@@ -1,0 +1,25 @@
+<mat-toolbar style="position: absolute;">
+  <mat-button mat-icon-button aria-label="Example icon-button with menu icon"
+      [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </mat-button>
+  <mat-menu #menu="matMenu" class="transparent">
+    <mat-button mat-menu-item>About</mat-button>
+    <mat-button mat-menu-item>Story NFT</mat-button>
+    <mat-button mat-menu-item [matMenuTriggerFor]="country">Country NFTs</mat-button>
+    <mat-button mat-menu-item [matMenuTriggerFor]="planet">Planet NFTs</mat-button>
+  </mat-menu>
+  <mat-menu #country="matMenu" class="transparent">
+    <mat-button mat-menu-item>Japan</mat-button>
+    <mat-button mat-menu-item>China</mat-button>
+  </mat-menu>
+  <mat-menu #planet="matMenu" class="transparent">
+    <mat-button mat-menu-item>Mars</mat-button>
+    <mat-button mat-menu-item>Jupiter</mat-button>
+  </mat-menu>
+</mat-toolbar>
+
+<div>
+  <object type="text/html" data="https://gateway.pinata.cloud/ipfs/QmXVa7G5QSHVauhuLoPou1PaE2UbtLYZDBizCB9CSJKBpk/"
+    style="width: 100%; height: 100vh"></object>
+</div>
